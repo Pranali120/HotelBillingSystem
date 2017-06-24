@@ -52,7 +52,7 @@ public class HotelBillingMain {
 		Order item6 = new Order(2, "dal", 60, 1);
 		order3.add(item6);
 		
-		Customer Customer3 = new Customer(2,"psj",23456,order3);
+		Customer Customer3 = new Customer(2,"xyz",23456,order3);
 		HotelBillingMain h2 = new HotelBillingMain();
 		bill2 = h2.calculateBill(order3);
 		System.out.println("Bill for customer" + Customer3.getName() + " = Rs "+bill2);
