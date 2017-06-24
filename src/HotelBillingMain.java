@@ -22,7 +22,7 @@ public class HotelBillingMain {
 
 	public static void main(String[] args) {
 
-		float bill, bill1, totalBill;
+		float bill, bill1, bill2,totalBill;
 		List<Order> order1 = new ArrayList<Order>();
         Order item1 = new Order(1, "Roti", 15, 3);
 		order1.add(item1);
@@ -46,11 +46,20 @@ public class HotelBillingMain {
 		bill1 = h1.calculateBill(order2);
 		System.out.println("Bill for customer" + Customer2.getName() + " = Rs "+bill1);
 		
-		totalBill = bill + bill1;
+		List<Order> order3 = new ArrayList<Order>();
+		Order item5 = new Order(1, "Rice", 20, 3);
+		order3.add(item5);
+		Order item6 = new Order(2, "dal", 60, 1);
+		order3.add(item6);
+		
+		Customer Customer3 = new Customer(2,"psj",23456,order3);
+		HotelBillingMain h2 = new HotelBillingMain();
+		bill2 = h2.calculateBill(order3);
+		System.out.println("Bill for customer" + Customer3.getName() + " = Rs "+bill2);
+		
+		totalBill = bill + bill1 + bill2;
 		System.out.println(" total Bill = Rs "+totalBill);
 	
-		
-		
 	}
 
 }
